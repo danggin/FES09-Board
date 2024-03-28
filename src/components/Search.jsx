@@ -16,9 +16,8 @@ function Search({ onClick }) {
   return (
     <form>
       <input
-        className='dark:bg-gray-600 h-7 indent-2 rounded border'
+        className='dark:bg-gray-600 h-8 indent-2 rounded border'
         type='text'
-        autoFocus
         value={keyword}
         onChange={handleChange}
       />
