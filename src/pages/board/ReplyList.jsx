@@ -46,12 +46,6 @@ function ReplyList() {
     },
   });
 
-  useEffect(() => {
-    setTimeout(() => {
-      fetchNextPage();
-    }, 5000);
-  }, []);
-
   //   const list = data?.item.map((item) => (
   //     <ReplyItem key={item._id} item={item} />
   //   ))
