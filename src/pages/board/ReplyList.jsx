@@ -1,9 +1,9 @@
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import ReplyItem from '@pages/board/ReplyItem';
 import ReplyNew from '@pages/board/ReplyNew';
+import Spinner from '@components/Spinner';
 import { useParams } from 'react-router-dom';
 import { useInfiniteQuery } from '@tanstack/react-query';
-import { useEffect } from 'react';
 import InfiniteScroll from 'react-infinite-scroller';
 
 // import { useEffect, useState } from "react";
@@ -24,7 +24,7 @@ function ReplyList() {
   // }, []);
 
   const { data, fetchNextPage } = useInfiniteQuery({
-    queryKey: ['posts', _id, 'replies'],
+    queryKey: ['posts', _id, 'replies?delay=2000'],
     queryFn: ({ pageParam = 1 }) =>
       axios.get(`/posts/${_id}/replies?delay=3000`, {
         params: {
@@ -68,7 +68,7 @@ function ReplyList() {
         pageStart={1}
         loadMore={fetchNextPage}
         hasMore={hasNext}
-        loader={<div>로딩중...</div>}
+        loader={<Spinner />}
       >
         {list || []}
       </InfiniteScroll>
