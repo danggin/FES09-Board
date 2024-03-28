@@ -63,7 +63,7 @@ function BoardList() {
     <div className='min-w-80 p-4'>
       <div className='text-center py-4'>
         <h2 className='text-2xl font-bold text-gray-700 dark:text-gray-200'>
-          게시물 목록 조회
+          게시물 목록
         </h2>
       </div>
       <div className='flex justify-between mr-4'>
@@ -85,7 +85,7 @@ function BoardList() {
               <th className='p-2 whitespace-nowrap'>제목</th>
               <th className='p-2 whitespace-nowrap'>글쓴이</th>
               <th className='p-2 whitespace-nowrap hidden sm:table-cell'>
-                조회
+                조회수
               </th>
               <th className='p-2 whitespace-nowrap hidden sm:table-cell'>
                 작성일
